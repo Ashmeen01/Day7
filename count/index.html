@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Storing</title>
+</head>
+<body>
+    <h1>Data Store</h1>
+    <h2 id="txt"></h2>
+    <button onclick="incrementBtn()">INCREMENT</button>
+    <button onclick="decreaseBtn()">DICREASE</button>
+    <button onclick="saveBtn()">SAVE</button>
+    <p id="save-el">Previous Entries: </p>
+    <script>
+
+
+        let saveEl = document.getElementById('save-el');
+        let txt = document.getElementById('txt');
+        let count = 0;
+
+        function incrementBtn() {
+            count +=1;
+            txt.innerText = count
+        }
+
+        function decreaseBtn() {
+            count -=1;
+            txt.innerText = count
+
+        }
+
+        function saveBtn() {
+            let countStr = count +  ' - '
+            saveEl.innerText += countStr
+        }
+    </script>
+</body>
+</html>
